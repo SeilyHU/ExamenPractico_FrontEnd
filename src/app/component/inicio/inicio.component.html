@@ -1,0 +1,52 @@
+<div id="title" class="head">
+    <div class="sonHead">
+        <b>
+            <h2 class="title">{{title}}</h2>
+        </b>
+        <h5 class="subTitle">{{subtitle}}</h5>
+    </div>
+    <div class="sonHead">
+        <button class="btn buttonHead" (click)="redirectPages('create')">Agregar</button>
+    </div>
+</div>
+
+<div class="tableProperty">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">NIT</th>
+                <th scope="col" style="text-align: center;">Opciones</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let result of resultData; index as i">
+            <tr class="table-success" *ngIf="(i % 2) == 0" scope="row" (click)="redirectPages('detail', result['IDEmpresa'])">
+                <td id="id">{{i + 1 }}</td>
+                <td>{{result['Estado']}}</td>
+                <td>{{result['NombreComercial']}}</td>
+                <td>{{result['Email']}}</td>
+                <td>{{result['NIT']}}</td>
+                <td class="icons">
+                    <i class="bi bi-eye" (click)="redirectPages('detail', result['IDEmpresa'])"></i>
+                    <i class="bi bi-pencil" (click)="redirectPages('update', result['IDEmpresa'])"></i>
+                    <i class="bi bi-trash" (click)="eliminarRegistro(result['IDEmpresa'], result)"></i>
+                </td>
+            </tr>
+            <tr class="table-info" *ngIf="(i % 2) == 1" scope="row" (click)="redirectPages('detail', result['IDEmpresa'])">
+                <td>{{i + 1}}</td>
+                <td>{{result['Estado']}}</td>
+                <td>{{result['NombreComercial']}}</td>
+                <td>{{result['Email']}}</td>
+                <td>{{result['NIT']}}</td>
+                <td class="icons">
+                    <i class="bi bi-eye" (click)="redirectPages('detail', result['IDEmpresa'])"></i>
+                    <i class="bi bi-pencil" (click)="redirectPages('update', result['IDEmpresa'])"></i>
+                    <i class="bi bi-trash" (click)="eliminarRegistro(result['IDEmpresa'], result)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

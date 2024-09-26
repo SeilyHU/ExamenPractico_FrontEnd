@@ -1,0 +1,45 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, rgb(103, 8, 186),rgb(148, 91, 234),rgb(45, 45, 216), rgb(37, 78, 246), rgb(25, 181, 212), white);
+    color: white;
+    margin-top: 50px;
+}
+
+.buttonHead {
+    padding: 10px 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgb(103, 8, 186),rgb(148, 91, 234),rgb(45, 45, 216), rgb(37, 78, 246), rgb(25, 181, 212));
+}
+
+
+.sonHead{
+    margin: 20px 5%;
+}
+
+.title{
+    font-family: Impact;
+    font-size: 54px;
+    font-weight: 100;
+}
+
+.subTitle{
+    font-family: Impact;
+}
+
+.tableProperty {
+    padding: 3% 5% ;
+}
+
+.icons {
+    display: flex;justify-content: space-evenly;cursor: pointer;
+}
+
+.table-success{
+    cursor: pointer;
+}
